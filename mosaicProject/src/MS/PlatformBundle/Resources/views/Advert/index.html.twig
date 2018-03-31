@@ -1,0 +1,26 @@
+
+{% extends "MSPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+	Acceuil - {{ parent() }} 
+{% endblock %}
+
+{% block msplatform_body %}
+
+	<h2>Liste des annonces</h2>
+
+	<ul>
+	  {% for advert in listAdverts %}
+	  <li>
+		<a href="{{ path('ms_platform_view', {'id': advert.id}) }}">
+		  {{ advert.title }}
+		</a>
+		par {{ advert.author }},
+		le {{ advert.date|date('d/m/Y') }}
+	</li>
+      {% else %}
+	<li>Pas d'annonces</li>
+      {% endfor %}
+      </ul>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{# src/MS/PlatformBundle/Resources/views/Advert/add.html.twig #}
+
+{% extends "MSPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Modifier une annonce - {{ parent() }}
+{% endblock %}
+
+{% block msplatform_body %}
+
+  <h2>Ajouter une annonce</h2>
+
+  {{ include("MSPlatformBundle:Advert:form.html.twig") }}
+
+  <p>
+    Vous ajoutez une annonce.
+  </p>
+
+  <p>
+    <a href="{{ path('ms_platform_view', {'id': 9}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'annonce
+    </a>
+  </p>
+
+{% endblock %}

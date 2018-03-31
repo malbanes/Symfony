@@ -1,0 +1,44 @@
+# src/OC/PlatformBundle/Resources/config/routing.yml
+
+ms_platform_home:
+    path:    /{page}
+    defaults: 
+        _controller: MSPlatformBundle:Advert:index
+        page:        1
+    requirements:
+        page: \d*
+
+ms_platform_view:
+    path:     /advert/{id}
+    defaults: {_controller: MSPlatformBundle:Advert:view }
+    requirements:
+        id: \d+
+
+ms_platform_add:
+    path:     /add
+    defaults: {_controller: MSPlatformBundle:Advert:add }
+
+ms_platform_edit:
+    path:     /edit/{id}
+    defaults: {_controller: MSPlatformBundle:Advert:edit }
+    requirements:
+        id: \d+
+
+ms_platform_delete:
+    path:     /delete/{id}
+    defaults: {_controller: MSPlatformBundle:Advert:delete }
+    requirements:
+        id: \d+
+
+ms_platform_view_slug:
+    path:     /{year}/{slug}.{_format}.{_locale}
+    defaults:
+        _controller: MSPlatformBundle:Advert:viewSlug
+        _format:     html
+        _locale:     fr
+   
+    requirements:
+        year: \d{4}
+        _format: html|xml
+        _locale: fr|en
+
