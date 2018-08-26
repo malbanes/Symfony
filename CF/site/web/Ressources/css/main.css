@@ -1,0 +1,298 @@
+.page
+{
+  margin:none;
+  padding:none;
+  display:content;
+  width:100%;
+}
+
+body
+{
+  margin:0px;
+}
+
+a{
+ text-decoration:none;
+ color:#ffea8f;
+}
+.indentation
+{
+  padding-left:20px;
+}
+.presa-content
+{
+  display:flex;
+  overflow-x:scroll;
+}
+.flex
+{
+ display:flex;
+}
+.inline
+{
+ display:inline;
+}
+h2.title-bordered
+{
+    border-top: 2px solid #9b0100;
+    border-bottom: 2px solid #9b0100;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px;
+    color:#9b0100;
+}
+
+
+h3.title-bordered
+{
+    border-top: 2px solid #9b0100;
+    border-bottom: 2px solid #9b0100;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 5px;
+    color:#9b0100;
+}
+
+.container-static
+{
+  text-align:left;
+  padding-left:3em;
+  display:block;
+}
+.header
+{
+  width:100%;
+  display:flex;
+}
+
+.header-top
+{
+  height:430px;
+}
+
+.presa
+{
+ width:100%;
+ display:inline-block;
+  background-color:#ffea8f;
+ text-align:center;
+}
+
+.header-left-content
+{
+  width:250px;
+  text-align:center;
+}
+
+.header-center
+{
+   text-align:center;
+  background-image: url("../marbre-head.JPG");
+   width:100%;
+}
+.header-2
+{
+  padding-top:50px;
+  padding-bottom:50px;
+  width:100%;
+  background-color:#ffea8f;
+  display:inline-block;
+}
+
+.footer
+{
+  width:100%;
+  background-color:#9b0100;
+  margin:none;
+}
+
+.mn {
+  display: initial;
+}
+
+.menu
+{
+  text-align:center;
+  display: flex;
+  margin:none;
+  position:absolute;
+  border-style:solid;
+  border-width:1px;
+  border-color:#ffea8f;
+  border-left-width:0px;
+  border-right-width:0px;
+}
+
+.menu-int
+{
+  padding:4px;
+  color:#ffea8f;
+  border-style:solid;
+  border-top-width:0px;
+  border-bottom-width:0px;
+  border-left-width:1px;
+  border-right-width:1px;
+  border-left-color:#ffea8f00;
+  border-right-color:#ffea8f00;
+  font-size:1em;
+  font-weight:bold;
+}
+.menu-int:hover {
+  background-color:#2922204d;
+  cursor:pointer;
+  border-left-color:#ffea8f;
+  border-right-color:#ffea8f;
+
+}
+
+.soumenu
+{
+ display:none;
+}
+
+.text-red
+{
+  color:#9b0100;
+}
+
+.text-yellow
+{
+  color:#ffea8f;
+}
+
+.yellow
+{
+  background-color:#ffea8f;
+}
+
+.red
+{
+background-color:#9b0100;
+  text-align:center;
+}
+.bracket
+{
+  font-size:5em;
+  color:#9b0100;
+}
+
+.bg-red
+{
+  background-color:#9b0100;
+  color:#ffea8f;
+  padding:2em;
+}
+
+.bg-yellow
+{
+  background-color:#ffea8f;
+  color:#9b0100;
+  padding:2em;
+}
+
+.article
+{
+  background-color:#ffea8f;
+  margin-right:50px;
+  color:#9b0100;
+
+}
+
+.article-content
+{
+  width:48%;
+  text-align:center;
+}
+
+button{
+  font-size:0.8em;
+  padding:2px;
+  margin-left:5px;
+  margin-top:15px;
+  height:30px;
+
+}
+
+ul#menu-gc {
+	display:table; /* contexte de formatage : alternative = inline-block */
+	margin:0;   /* centrage pour element similaire a block, si inline-block, alors text-align:center; sur le parent  */
+	padding:0;		/* reset marge interne */
+	}
+#menu-gc li {
+	display:inline-block; /* alternative à float avec contexte de formatage */
+	}
+#menu-gc ul {
+	padding:0;			 	/* reset marge internes */
+	position:absolute;		/* extraction du flux , peut necessité un z-index selon contexte des styles */
+	}
+#menu-gc ul li {
+	display:block;			/* retour a un comportement de type block */
+	}
+
+/* gestion des menus */
+
+/* on cache au repos les menus */
+#menu-gc ul {
+	left:-9999px;
+			/* on ejecte le menu de l'écran sans le rendre totalement inaccessible */
+	}
+/* on affiche le menu au survol de son ITEM parent */
+#menu-gc li:hover ul {
+	left:auto;
+	margin-top:4px;				/* on laisse le navigateur faire si pas de positionement relatif impliqué dans un parent  */
+	}
+	
+/* un peu de mise en forme */
+#menu-gc {
+  border-style:solid;
+  border-width:1px;
+  border-color:#ffea8f;
+  border-left-width:0px;
+  border-right-width:0px;
+	
+	color:white;
+	}
+#menu-gc ul{
+  border-style:solid;
+  border-width:1px;
+  border-color:#ffea8f;
+  border-top-width:0px;
+  border-bottom-width:0px;
+  background-color:#392b29b3;
+	color:white;
+	}
+#menu-gc li {
+	min-width:60px;
+	text-indent: 0.5em;
+	padding: 0.25em 0.5em 0.25em 0;
+  border-style:solid;
+  border-width:1px;
+  border-color:#ffea8f00;
+  border-top-width:0px;
+  border-bottom-width:0px;
+	}
+#menu-gc ul li {
+	min-width:60px;
+	text-indent: 0.5em;
+	padding: 0.25em 0.5em 0.25em 0;
+  border-style:solid;
+  border-width:1px;
+  border-color:#ffea8f00;
+  border-left-width:0px;
+  border-right-width:0px;
+	}
+
+#menu-gc li:hover {
+	background:#2922204d;
+  border-color:#ffea8f;
+	}
+#menu-gc li li:hover {
+	background:#2922204d;
+  border-color:#ffea8f;
+	}
+
+
+
+
